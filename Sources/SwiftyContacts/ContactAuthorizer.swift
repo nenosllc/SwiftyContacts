@@ -13,7 +13,7 @@ import Foundation
 ///
 public actor ContactAuthorizer {
     
-    init() {
+    public init() {
         
     }
     

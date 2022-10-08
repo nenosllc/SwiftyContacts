@@ -13,7 +13,7 @@ import Foundation
 ///
 public actor ContactUpdater {
     
-    init() {
+    public init() {
         
     }
     
