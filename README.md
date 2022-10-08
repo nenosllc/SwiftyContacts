@@ -15,24 +15,6 @@ A Swift library for Contacts framework.
       - [Requests access to the user's contacts](#requests-access-to-the-users-contacts)
       - [Request the current authorization status](#request-the-current-authorization-status)
       - [Fetch all contacts from device](#fetch-all-contacts-from-device)
-      - [Fetch contacts matching a name.](#fetch-contacts-matching-a-name)
-      - [Fetch contacts matching an email address.](#fetch-contacts-matching-an-email-address)
-      - [Fetch contacts matching a phone number.](#fetch-contacts-matching-a-phone-number)
-      - [To fetch contacts matching contact identifiers.](#to-fetch-contacts-matching-contact-identifiers)
-      - [To fetch contacts matching group identifier](#to-fetch-contacts-matching-group-identifier)
-      - [find the contacts in the specified container.](#find-the-contacts-in-the-specified-container)
-      - [Fetch a contact with a given identifier.](#fetch-a-contact-with-a-given-identifier)
-      - [Add contact to the contact store.](#add-contact-to-the-contact-store)
-      - [Update contact to the contact store.](#update-contact-to-the-contact-store)
-      - [Delete contact to the contact store.](#delete-contact-to-the-contact-store)
-      - [Adds a group to the contact store.](#adds-a-group-to-the-contact-store)
-      - [Fetches all groups in the contact store.](#fetches-all-groups-in-the-contact-store)
-      - [Updates an existing group in the contact store.](#updates-an-existing-group-in-the-contact-store)
-      - [Deletes a group from the contact store.](#deletes-a-group-from-the-contact-store)
-      - [Find the contacts that are members in the specified group.](#find-the-contacts-that-are-members-in-the-specified-group)
-      - [Add a new member to a group.](#add-a-new-member-to-a-group)
-      - [Removes a contact as a member of a group.](#removes-a-contact-as-a-member-of-a-group)
-  - [Author](#author)
   - [License](#license)
 
 ## Requirements
@@ -47,11 +29,12 @@ Once you have your Swift package set up, adding SwiftyContacts as a dependency i
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/SwiftyContacts/SwiftyContacts.git", .upToNextMajor(from: "4.0.0"))
+    .package(url: "https://github.com/nenosllc/SwiftyContacts.git", .upToNextMajor(from: "2.0.0"))
 ]
 ```
 
-## Get started
+## Getting Started
+More documentation can be found by downloading the project and building the Xcode DocC documentation from Xcode.
 
 ### async-await
 
@@ -70,24 +53,6 @@ print(status == CNAuthorizationStatus.authorized)
 ```swift
 let contacts = try await fetchContacts()
 ```
-
-#### Fetch contacts matching a name.
-```swift
-let contacts = try await fetchContacts(matchingName: "Satish Babariya")
-```
-
-#### Fetch contacts matching an email address.
-```swift
-let contacts = try await fetchContacts(matchingEmailAddress: "satish.babariya@gmail.com")
-```
-
-#### Fetch contacts matching a phone number.
-```swift
-let contacts = try await fetchContacts(matching: CNPhoneNumber(stringValue: "+919426678969"))
-```
-
-## Author
-Satish Babariya, satish.babariya@gmail.com
 
 ## License
 SwiftyContacts is available under the MIT license. See the LICENSE file for more info.
